@@ -1,0 +1,195 @@
+\section{THE REALS}
+1.1 Line 3 does not imply line 4 due to $x-y=0$, a division by zero error.
+
+1.2 (a) True, by Archimedean Principle. 
+\\(b) False, as by well-ordering principle, take $m=1$ which is the smallest element of $\mathbb{N}$. 
+\\(c) True, take $m=n$.
+\\(d) True, take $m=n$.
+\\(e) True, take $m=n$.
+\\(f) False, take $x=1, y=2$. There is no integer in between.
+\\(g) True, take $z=\frac{x+y}{2} \in \mathbb{R}$, where it is easily shown that $x<z<y$.
+
+1.3 (a) Take all items that are also in B out of A.
+
+(b) Put each combination of items that can be taken out of A (including taking ``nothing'' out as a combination) into a separate box. Then, put all those boxes into a big box.
+
+(c) Count the total number of distinct items in A.
+
+1.4 (a) Take everything out of each and every one of the boxes, and put them into a big box.
+
+(b) Check to see what items are common in every one of the boxes. Put those items into a box.
+
+1.5 (a) $A \cup B = A$ means (1) if $x \in A$ or $x \in B$, then $x \in A$ (2) if $x \in A$ then $x \in A$ or $x \in B$ which is trivially true. $B \subseteq A$ means if $x\in B$ then $x \in A$.
+($\implies$) We want to prove the statement $B \subseteq A$ i.e. $x\in B$ then $x \in A$. This is already given by (1) of our hypothesis.\\
+($\impliedby$) We want to prove (1) and (2). Since (2) is trivially true as mentioned, we only prove (1). But for (1), if $x \in A$ then $x \in A$ is again trivially true, and if $x \in B$ then $x \in A$ is given by our hypothesis as well.
+So (1) is also true (i.e ``if a or b, then c'' is proven by ``if a then c'' and ``if b then c'' separately).
+
+(b), (c), (d) is proven similarly by the above method.
+
+1.6 (a) Since $f^{-1}(B)=\{x \in X : f(x) \in B\}$, then by definition $f(f^{-1}(x)) \in B$. 
+
+(b) Consider non-surjective functions. Let $X = \{1,2,3\}$, $B = \{1,2\}$ and $f(x)=1$. Clearly, $f$ is not surjective,
+as nothing gets mapped to $2\in B$. That is, the pre-image of 2 is just the null set. So, $f(f^{-1}(B))=\{1\} \neq B$.
+
+(c) By definition, $f(A)=\{f(a) \in Y : a \in A\}$, so $f^{-1}(f(A))=\{x \in X : f(x) \in f(A)\}$.
+Now suppose for contradiction that $x \notin A$ but $f(x) \in f(A)$. Then $x \notin A$ yet $x \in A$ by definition of $f(A)$.
+Thus, it must be true that $x \in A$.
+
+(d) Consider $X=\{1,2,3,4\}, A=\{1,2\}, Y=\{1\}$ and $f:X\rightarrow Y$ by defined as $f(x)=1$. We see that $f(A)=1$, but $f^{-1}(f(A))=\{1,2,3,4\} = X\neq A = \{1,2\}$ since it's a constant function for the entire domain $X$, not just the subset $A$.
+
+1.7 To show $f$ is one-to-one, we want to show if $f(x)=f(y)$ then $x=y$. Since $f(x)=f(y)$, then $g(f(x))=g(f(y))$. Thus, $x=y$.
+
+To show $g$ is onto, we want to show for all $b \in X$, there exists an $a \in Y$ such that $f(a)=b$. Take
+$a=f(b) \in Y$. Then, $a$ is in the domain of $g$, then we get $g(f(b))=b$.
+
+1.8 Proof done in Grimmett, Chapter 1, question 1.
+
+1.9 (a) Use the same proof to show $\sqrt(2)$ is irrational.
+
+(b) It does not work because $4|m^2$ does not imply $4|m$. This is exactly the case when $m=2$. And if we do do the proper assumptions,
+we get $n=k$, which shows $n=1$.
+
+(c) \begin{lemma}
+    If $m$ is rational, $n$ is irrational, then $mn$ is irrational.
+\end{lemma}
+
+\begin{proof}
+    Suppose for contradiction that $mn$ is rational. Then \[ mn=\frac{p}{q} \] but since $m$ is rational, $m=\frac{a}{b}$. 
+    So we have \[n = \frac{pb}{qa}\] which shows $n$ is rational also, which is a contradiction.
+\end{proof}
+
+Now we begin the main part. Since $(\sqrt{3}-\sqrt{5})(\sqrt{3}+\sqrt{5})=-2$, which is rational, then by Lemma 1.1,  
+they are either both rational or both irrational. Now consider \[(\sqrt{3}-\sqrt{5})+(\sqrt{3}+\sqrt{5})\]
+This equals $\sqrt{3}$, which is irrational. If they were both rational, then by property of the ordered field $\Q$, the sum must also be rational. But clearly it is not,
+which means they must both be irrational.
+
+1.10 Let $1$ and $1'$ be multiplicative inverses of a field. See that
+\begin{align}
+    1'a &= a \\
+    1'a-a &=0 \\
+\end{align}
+Since $1a=a$ also, substitute into the above.
+\begin{align}
+    1'a-1a &=0 \\
+    a(1'-1) &= 0
+\end{align}
+The only way for this to be true for all $a\in \F$ is for $1'-1=0$. So $1'=1$.
+
+1.11 (a) $\Z = \{ \dots, -3,-2,-1,0,1,2,3, \dots \}$ satisfies (i) but not (ii) since both $a$ and $-a$ is in $P$. So only one ``sign'' is allowed.
+
+(b) The half line \[[0,\infty)\] satisfies (ii) but not (i) because, for example, \[(-2)(-4)=(8).\]
+
+1.12 (a) Note that $a<b \implies a-b<0$ and $c<d \implies 0<d-c$. So $a-b<d-c$ by Order Axiom, and thus $a+c<b+d$ by re-arranging.
+\\(b) It suffices to give a counter-example. Take $a=-100, b=1, c=-1, d=1$. We have $a<b$ and $c<d$ but $100>1$ i.e. $ac>bd$. The key here is to think of a very small negative numbers being flipped back to a very large positive number. In other words, having a large absolute value. Also, Order Axiom has been used to define the inequality symbols.
+
+1.13 (a) \underline{Proof 1.}  For the sake of contradiction, suppose $a<b+\epsilon$ for every $\epsilon>0$ yet $a>b$. Since $a-b=\epsilon_0>0$, take $\epsilon=\epsilon_0$. Then $a-b=\epsilon_0$ and $a-b<\epsilon_0$, which is impossible. Thus, the original statement must be true.
+\underline{Proof 2.} This proof I came up with initially myself. However, they are exactly the same. Suppose for contradiction $a<b+\epsilon$ for every $\epsilon>0$ yet $a>b$. Take $\epsilon=a-b>0$ (by Order Axiom since $a>b$). Then $a<b+(a-b)=a$, i.e. $a<a$, again a contradiction. For some reason, this slight change of wording makes more intuitive sense to me. 
+\\(b) If $a-b>0$. Then $a-b<\epsilon$ for all $\epsilon>0$. By (a), we know $a\leq b$. If $a-b<0$, i.e. $b-a>0$, then $b<a+\epsilon$ for all $\epsilon$, again by (a) we have $b\leq a$. Since we asserted that both must be true, we deduce $a=b$.
+
+1.14 Simply check all the cases, which I'm too lazy to type out.
+
+1.15 TODO
+
+1.16 By Order Axiom, we have either $a>b$, $a=b$ or $a<b$. For $\max\{x,y\}$, if $y\geq x$, then $|y-x|=y-x$. $\max\{x,y\}=\frac{x+y+y-x}{2}=y$. Otherwise, $|y-x|=-(y-x)=x-y$, thus $\max\{x,y\}=\frac{x+y+x-y}{2}=x$. The proof is similar for $\min\{x,y\}$. 
+
+For $\max\{x,y,z\}$, we expand $\max\{x, \max\{y,z\}\}$.
+
+1.17 \begin{lemma}
+    If $a,b,c,d \geq 0$, then $ac < bd$.
+\end{lemma}
+\begin{proof}
+    By Note 1.9, $ac < bc$. Similarly, $bc < bd$. Thus $ac < bd$ by transitivity.
+\end{proof}
+We proceed by induction. For $n=2$, $a^2 < b^2$ is true by Lemma 1.2. Now suppose
+it is true for $n$. That is, $a^n < b^n$. Applying Lemma 1.2 again gives $a^{n+1}<b^{n+1}$.
+Thus, by induction, the statement is true.
+
+1.18 We proceed by induction. The base case $n=1$ is straight-forward. For $n=2$, it is true by triangle inequality.
+Now assume it is true for $n$, that is \[ |a_1+\cdots+a_n| \leq |a_1|+\cdots+|a_n|.\]
+Then \begin{align}
+    |a_1+\cdots+a_n+a_{n+1}| &= |(a_1+\cdots+a_n)+a_{n+1}|\\
+    &\leq |a_1+\cdots+a_n| + |a_{n+1}|\\
+    &\leq |a_1|+\cdots+|a_n| + |a_{n+1}|
+\end{align}
+And the result follows from induction.
+
+1.19 The result follows from standard induction techniques.
+
+1.20 Prime numbers.
+
+1.21 If $f(x) \in f(A_1 \cap A_2)$ iff $x \in A_1 \cap A_2$. Then $x \in A_1$ and $x \in A_2$, so $f(x) \in f(A_1)$ and $f(x) \in f(A_2)$.
+That is, $f(x) \in f(A_1) \cap f(A_2)$.
+
+1.22 Consider $A=\{1,2,3\}$, $B=\{2,3,4\}$. Then $A \cap B = \{2,3\}$. Suppose $f(2)=f(3)=1$, and $f(1)=f(4)=2$. Then $f(A)=f(B)=\{1,2\}$. So $f(A) \cap f(B) = \{1,2\} \neq \{1\}=f(A \cap B)$. Intuitively, the intersection may have the intersection range, but the non-intersection may also have the intersecting range.
+
+1.23 Since $A \subseteq B$, we have $A=B$ or $A \subset B$. The first is true since suprema are unique, as proved by Proposition 1.2.2., hence $\sup(A)=\sup(B)$. For the second, $\sup(B)$ is an upper bound for A. Since $\sup(A)$ must be the least of these upper bounds by definition, $\sup(A) \leq \sup(B)$.
+
+1.24 (a) We use the supremum property. By assumption, since $x\leq M$ for all $x \in A$, $M$ is an upper bound for $A$. Then, given any $\epsilon>0$, consider $M-\epsilon$. Since $M \in A \geq M-\epsilon$, $M-\epsilon$ is not an upper bound. QED \@.
+
+(b) The proof is similar. We use the infimum property. Since $m \leq x$ for all $x \in B$, $m$ is a lower bound of $B$. Also, given any $\epsilon>0$, consider $m+\epsilon$. Since $m \in B \leq m+\epsilon$, $m+\epsilon$ is not a lower bound. QED \@.
+
+\begin{remark}
+This exercise proves that if the maximum (minimum) exists, then it equals the supremum (infimum). The converse is not always true.
+\end{remark}
+
+1.25 We proceed by induction on an $n$ element set $A_n$. Consider the base case $n=2$, where a set $A_2$ only has two elements. There exists an maximal element, which can be found by $\max\{x,y\}$ as in Exercise 1.16, where $x,y \in A_2$. Moreover, $\max\{x,y\}$ is either $x$ or $y$. Then, suppose it is true for an $n$ element set $A_n$, i.e.\ the maximal element exists and is in $A_n$. Just like in Exercise 1.16, since $A_{n+1}=A_n \cup z$ where $z$ is a discrete real number, $\max\{A_n+1\}=\max\{\max(A_n),z\}$. This exists, and the maximal element is either in $A_n$, or $z$, in both cases it is in $A_{n+1}$. By mathematical induction, we are done. 
+
+1.26 (Prove that $\mathbb{N}$ is complete). If a non-empty set $A$ in $\mathbb{N}$ is bounded above, then it is finite. By Exercise 1.25, there is a maximal element $M$ and it is in $A$. By Exercise 1.24, $\sup A=M$. 
+
+1.27 (a) $\sup A = \frac{1}{2}$ (requires proof).
+
+(b) $\inf B = 0$ (requires proof).
+
+(c) $\sup C$ does not exist since $C$ is not bounded above (requires proof).
+
+1.28 (Prove the infimum property). 
+
+$(\implies)$ Assume $\inf(A)=\beta$. By definition of infimum, $\beta$ is a lower bound of $A$. Fix an $\epsilon >0$. Since $\beta+\epsilon > \beta$, so $\beta+\epsilon$ cannot be a lower bound, since $\beta$ by definition is the greatest of all lower bounds.  Then since $\beta$ is not a lower bound of $A$, by definition there must be an $x \in A < \beta+\epsilon$. 
+
+$(\Longleftarrow)$ Assume (i) and (ii). We want to show that $\beta$ is the infimum of $A$, i.e. it is a lower bound (given already by (i)) and it is the greatest of all lower bounds. To show $\beta$ is the greatest, suppose there exists another lower bound $\beta'$ such that $\beta' > \beta$. We know that $\beta' - \beta = \epsilon_0 > 0$. But by (ii), $\beta + \epsilon_0 = \beta + (\beta' - \beta) = \beta'$ is not a lower bound of $A$. This is a contradiction. Therefore, $\beta$ must be the greatest lower bound. 
+
+1.29 For the first one, $\frac{n}{n+1} < 1$ for all $n \geq 1$, so 1 is an upper bound. Also, observe that
+\begin{align}
+    1 - \epsilon &< \frac{n}{n+1} \\
+    \frac{\epsilon}{1-\epsilon} &> \frac{1}{n}
+\end{align}
+This $n$ always exists by Archimedean principle. So, $1-\epsilon$ is not an upper bound. By suprema analytically theorem, 1 is the supremum.
+
+For the second one, note that $\frac{n}{n+1} \geq \frac{1}{2}$ whenever $n\geq\frac{1}{2}$ by simple computation. With the fact that $\frac{1}{2}$ is an element of the set, 
+it follows from suprema analytically theorem that $\frac{1}{2}$ is the infimum.
+
+1.30 (a) Take $\epsilon=\sup(B)-\sup(A) > 0$. By supremum property, there exists $b \in B$ such that $b > \sup(B)-\epsilon = \sup(B)-(\sup(B)+\sup(A)) = \sup(A)$. Thus, $b$ is an upper bound for A. 
+
+(b) Consider $A=\{0\}$ and $B=\{-\frac{1}{n}\}$. It is easily proven that $$\sup(A) = \sup(B) = 0$$ However, all elements in $B$ are strictly smaller than the only element in $A$.
+
+1.31 $\sup (A \cup B) = \max (\sup A, \sup B)$. Since $a \leq \sup A$ and $b \leq \sup B$ for all $a \in A, b \in B$. Thus, $a,b \leq  \max (\sup A, \sup B)$ for all $a,b$. And for either case, by suprema analytically theorem, we can find the corresponding element in $A$ or $B$.
+
+1.32 (a) Since $a \leq \sup A$ for all $a$, then $a + c \leq \sup A + c$ for all $a$. So $\sup A + c$ is an upper bound. Then see that there exists an $a$ s.t. $\sup A - \epsilon < a$ so adding
+$c$ to both sides does not change the inequality. I.e. $\sup A + c - \epsilon < a + c$ shows it's not an upper bound. Thus, it is the supremum by suprema analytically theorem.
+
+(b) $c > 0$.
+
+1.33 Since there is an element $x \in A$, then by definition $-x \in -A$. Thus $-A$ is non-empty. And $A$ is bounded below by $\inf A$, that is
+\[\inf A \leq x\] for all $x \in A$. Multiplying both sides by -1, we get \[-\inf A \geq -x\] for all $x \in A$. So 
+$-A$ is bounded above by $-\inf A$. Now we show it is the supremum. By infimum analytically theorem, there exists $x \in A$ such that
+\[\inf A + \epsilon > x\] so multiplying -1 to both sides gets \[-\inf A - \epsilon < -x.\]
+
+By suprema analytically theorem, $-\inf A$ is indeed $\sup -A$.
+
+1.34 (Nested interval property). Consider the set $A=\{a_n: n \in \mathbb{N} \}$. Every $b_n$ is greater than every $a_n$, since they are nested. Thus, we know that $A$ is bounded. Since $\mathbb{R}$ is complete, there exists an $x=\sup(A) \geq a_n$ for all $a_n$. Also, by definition of supremum, $x \leq b_n$ for all $b_n$. Hence, we see that $a_n \leq x \leq b_n$ for all $n$. Equivalently, $x \in [a_n, b_n]=I_n$ for all $n$. Again, this is equivalent to $\bigcap_{n=1}^{\infty}I_n$. It follows that the intersection is non-empty. 
+
+1.35 The counter-example $(0,\frac{1}{n})$ proves this. Every positive number is eventually excluded, yet 0 is not in the set either.
+
+1.36 (a) $\{-2,3,6\}$ 
+(b) It is straight-forward to show that $\sup A + \sup B$ is an upper bound. By suprema analytically theorem,
+\begin{align}
+    \sup(A) + \sup(B) - \epsilon
+    &= \sup(A) + \sup(B) - \frac{\epsilon}{2} - \frac{\epsilon}{2} \\
+    &= (\sup(A) - \frac{\epsilon}{2})  + (\sup(B) - \frac{\epsilon}{2}) \\
+    &< a + b    
+\end{align}
+where such elements $a$ and $b$ must both exist.
+
+1.37 (a) \{-3,0,5\}
+
+(b) $A=\{-1,-3,-5\}$, $B=\{-2,-4,-6\}$.

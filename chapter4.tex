@@ -1,0 +1,69 @@
+\section{SERIES}
+4.1 (a) Converges conditionally by alternating series test.\\
+(b) Diverges by $k^{th}$-term test.\\
+(c) Converges absolutely by geometric series test.\\
+(d) Converges by ratio test.
+\begin{remark}
+    Try to do this without ratio test (direct comparison).
+\end{remark}
+(e) Diverges by ``telescoping series test''. \\
+(f) Diverges by $k^{th}$-term test.\\
+(g) Converges conditionally by alternating series test.\\
+(h) Diverges by comparison test to harmonic series.\\
+(i) Diverges by comparison test to harmonic series.
+
+4.2 Diverges by Proposition 3.32. The subsequence $S_{2n}$ and $S_{2n+1}$ converge to 0 and -1
+respectively, thus $S_n$ must diverge.
+
+4.3 Since it is always true that $-|a_k| \leq a_k \leq |a_k|$ from Chapter 1, then we must also have
+$\sum -|a_k| \leq \sum a_k \leq \sum |a_k|$. Thus, proof idea: Split the sum into positive and negative parts, both converge to finite value, \dots
+Actually, I was correct after looking at solutions online, but I'm currently far too lazy to write it out. Check proof from Paul's Online Math Notes.
+    
+4.4 (a) $\frac{1}{n}$ diverges but $\frac{1}{n^2}$
+
+(b) Since $\sum a_k$ converges, it follows that $a_k \rightarrow 0$. Thus, for $\epsilon=1$, there
+exists some $N \in \N$ where $|a_k| < \epsilon = 1$ for all $k > N$. Also note that $|a_k|=a_k$. Consider $\sum_{k=N+1}^{\infty}a_k=L$ (this is true since we ignored finitely many
+terms in the beginning). Since for $0<a_k<1$, we have $a_k > a_k^2$, since all terms are positive we can use the comparison test to
+see that $\sum a_k^2$ converges (ignoring finitely many terms in the beginning, but they must sum to a finite value anyway).
+
+(c) Consider the counter-example $\sum_{k=1}^{\infty} -1^{k+1}\frac{1}{\sqrt{n}}$. Its square's series diverges.
+
+4.5 The series $\sum {(-1)}^n \frac{1}{n}$.
+
+4.6 Consider partial sums $S_n=\sum_{k=1}^{n} a_k - a_{k+1}$. Notice that this is a
+telescoping series, and cancels out to give $S_n=a_1-a_{n+1}$. As $n \rightarrow \infty$, the latter term goes to 0 by assumption. The result follows. 
+
+4.7 Take $\sum {(-1)}^{k+1}\frac{1}{\sqrt{n}}$.
+
+4.8 By the fact presented in this chapter, it sums to $\frac{\ln{2}}{7}$.
+
+4.9 It can diverge to $\infty$ or $-\infty$, depending on $a$. 
+
+4.10 \underbar{Sketch}.
+\begin{align}
+    |S_m-S_n| &= |\sum_{k=0}^{m} r^{k} - \sum_{k=0}^{n} r^{k}| \\
+    &= |\sum_{k=n+1}^{m} r^{k}| \\
+    &= |r^{n+1} + r^{n+2} + \cdots + r^{m}| \\
+    &\leq |r|^{n+1} + \cdots + |r|^{m} \\
+    &= \frac{|r|^{n+1}(1-|r|^{m-n}) }{1-|r|}\\
+    &= \frac{|r|^{n+1}-|r|^{m+1}}{1-|r|} \\
+    &\leq \frac{|r|^{n}-|r|^{m}}{1-|r|}
+\end{align}
+So we want to set $\frac{|r|^{n}}{1-|r|} < \frac{\epsilon}{2}$ which means we want $N > \log_{|r|}{\frac{\epsilon \cdot (1-|r|)}{2}}$.
+
+Then we proceed with the proof as standard (omitted here since I'm lazy \ldots).
+
+4.11 (a) $70+7 \sum_{k=0}^{\infty}\frac{1}{10}^k$
+
+(b) $70 \sum_{k=0}^{\infty} \frac{1}{10}^k$
+
+We get the answer $\frac{700}{9}$ from both (a) and (b).
+
+(c) If a number $q$ has a repeating decimal $m$ every $n$ digits, then represent
+the decimal as $a+\sum_{k=1}^{\infty}m{(\frac{1}{10^n})}^k=\frac{m-am+a10^n}{10^n-m}$ which means $q$ is rational.
+
+4.12 (a) If $\sum a_k$ converges absolutely, meaning $\sum |a_k|$ converges, since $b_k$ is a subsequence of $a_k$, the number of terms of $b_k$ is at most that of $a_k$. Thus,
+it follows that \[\sum |b_k| \leq \sum |a_k|\] and so by comparison test, since $\sum |a_k|$ converges, $\sum |b_k|$ converges, and the result follows from Proposition 4.18.
+
+(b) Consider the example from Exercise 4.5. That is, consider $(a_k)={(-1)}^{k+1}\frac{1}{n}$. This converges 
+conditionally, and if we pick the subsequence $(a_{2k})$, it diverges to $-\infty$.

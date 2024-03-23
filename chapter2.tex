@@ -1,0 +1,94 @@
+\section{CARDINALITY}
+2.1 (a) $\{\phi\},\{a\},\{b\}, \{c\},\{a,b\},\{a,c\}, \{b,c\}, \{a,b,c\}$
+\begin{remark}
+    Note that the cardinality is $2^3=8$.
+\end{remark}
+
+(b) $2^n$.
+
+2.2 Recall Fact 2.4. Define $f:\N \rightarrow \{e^n: n \in \N\}$ as $n  \mapsto e^n$. (One-to-one) If $e^x=e^y$, then taking log on both sides
+gives $x \ln e = y \ln e $, so $x=y$. (Surjective) For all $b = e^n$ in the codomain, take $a = n$ in the domain.   
+
+2.3
+(a) $f(x)=x+1$
+
+(b) $f(x)=-x+3$
+
+(c) 
+
+(d)
+
+(e) 
+
+(f)
+
+(g)
+
+(h)
+\begin{remark}
+    This exercise showcases that strict subsets can have the cardinality, even for uncountably infinite sets.
+\end{remark}
+
+2.4 (a) The identity function $id:A \rightarrow A, a \mapsto a$ is a bijection that always exists. Thus, $A \sim A$.
+
+(b) If $A \sim B$, then there exists a bijection $f:A \rightarrow B$, which is the same as the bijection $f^{-1}:B \rightarrow A$. Thus, $B \sim A$.
+
+(c) If $A \sim B$ and $B \sim C$, then there are bijections $f:A \rightarrow B$ and $g:B \rightarrow C$. Thus, $g \circ f$ is a bijection from $A \rightarrow C$. Thus, $A \sim C$.
+
+\begin{remark}
+    Clearly the above proof has some missing details. For (c), we could prove that composition of bijections is also a bijection by showing
+    injectivity and surjectivity.
+\end{remark}
+
+2.5 (a) Since $A$ and $B$ are countable, we can enumerate them both as \[A \cup B =\{a_1, b_1, a_2, b_2, a_3, b_3, \dots \}.\]
+
+(b) Use Cantor's diagonalization argument to represent $\bigcup_{n=1}^{\infty} A_n$ as
+\[\begin{matrix}
+    A_{1} & a_{11} & a_{12} & a_{13} &\dots \\
+    A_{2} & a_{21} & a_{22} & a_{23} &\dots \\
+    A_{3} & a_{31} & a_{32} & a_{33} &\dots \\
+    \vdots & \vdots & \vdots & \vdots &\ddots
+\end{matrix}\]
+to see that it must be countable.
+
+2.6 $\{1,2,3,4,5,6,\dots\}$ to $\{1,-1,2,-2,3,-3,\dots\}$. That is, every odd number of $\N$ maps to every positive number of $\Z$, every even number of $\N$ maps to every negative number of $\Z$.
+
+2.7 (a) $A_1=\{\frac{1}{2},\frac{1}{3},\frac{1}{4}\}$ and $B_1=\{2,3,4\}$. Then $A \cdot B = \{1\}$.
+
+(b) $A_1=\{2,5,7\}$ and $B_1=\{9,11,13\}$.
+
+(c) $A_1=\{1,2,3\}$ and $B_1=\{1\}$. Then $A\cdot B=\{1,2,3\}$.
+
+For (c).
+
+2.8 (a) Let the subsets be $\{1,7,13,\dots\}$, $\{2,8,14,\dots\}$, $\{3,9,15,\dots\}$, $\{4,10,16,\dots\}$, $\{5,11,17,\dots\}$, $\{6,12,18,\dots\}$. So $6n-5$, $6n-4$, \dots, $6n$.
+
+(b) ???
+
+2.9 $|\Z \times \N|$ is countable by Cantor's diagonalization argument. Let the horizontal be natural numbers, the vertical be integers.
+Then the matrix would be each pairing of $(n \in \N, z \in \Z)$.
+
+2.10 $S$ is uncountable, with the same proof to show $\R$ is uncountable.
+
+2.11 (a) $\implies$ (b) If $X$ is finite or countably infinite, then $|X| \leq |\N|$. This implies there exists a one-to-one function $f:X \rightarrow \N$.
+
+(b) $\implies$ (c) If there is a one-to-one function $f:X \rightarrow \N$, then $|X| \leq |\N|$. Thus, there exists an onto function $g: \N \rightarrow X$.
+
+(c) $\implies$ (a) If there is an onto function $g:\N \rightarrow X$, then $|N| \geq |X$. Thus, $|X|$ is finite or countably infinite.
+
+We are done.
+
+2.12 (a) $(n,n+1)$ for $n \in \N$.
+
+(b) Suppose there were some collection of uncountably many disjoint open intervals. For any interval, say $(a,b)$, by density of $\Q$ in $\R$,
+there always exists some rational $q$ such that $a < q < b$. And since they are disjoint, each $q$ must be different. Thus, we can enumerate
+all the intervals using this $q$. Hence, it is countable since there is a bijection with $\Q$ and hence $\N$. By contradiction, it must be countable.
+
+2.13 Suppose for contradiction that irrational numbers $\R \setminus \Q$ was countable. Then, by Exercise 2.5, $\R = \R \cup (\R \setminus \Q)$ is countable. But
+$\R$ is uncountable, a contradiction arises. Thus, irrational numbers must be uncountable.
+
+2.14 (One-to-one) Suppose $f(p,q)=f(m,n)$, then
+\begin{align}
+    2^{n-1}(2m-1) &= 2^{q-1}(2p-1) \\
+    2^n(2m-1) &= 2^q(2p-1)
+\end{align}

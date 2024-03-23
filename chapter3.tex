@@ -1,0 +1,294 @@
+\section{SEQUENCES}
+3.1 By the definition of convergence, for $\epsilon = 0.001$, there exists an $N \in \N$ such that for all $n > N$, $|a_n - 0.001| < \epsilon$. Equivalently,
+\[
+    0.001 - 0.001 < a_n < 0.001 + 0.001 
+\]
+So
+\[
+    0 < a_n < 0.002
+\]
+Therefore, since there are finitely many terms for $a_n$ with $n \leq N$, only finitely many $a_n < 0$.
+
+3.2 (a) Possible. $\{1,0,1,0,1,0,\dots\}$
+
+(b) Impossible. Suppose there exists a sequence $(a_n)$ with infinitely many 0s, but converges to a non-zero number. Then we have for all $\epsilon > 0$, there exists an
+$N \in \N$ such that for all $n>N$, we have $|a_n-L|<\epsilon$, where $L \neq 0$.  
+Then we set $0<\epsilon<L$. But since there are infinitely many 0s, we must also have $L<\epsilon$. Thus, we reach a contradiction.
+
+(c) \textcolor{red}{TO DO.}
+
+(d) \textcolor{red}{TO DO.}
+
+3.3 (a) Consider the sequence $\{1,0,1,0,1,\dots\}$. The sequence does not converge to $a=0$. However, for all $\epsilon>0, |a_{2n}-0|=|0-0|=0<\epsilon$ for $n=1,2,3,\dots$. So it \textit{Non}verges-type-1 to $a=0$.
+
+(b) Consider the sequence $\{1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,\dots\}$, alternating five consecutive 1's and 0's. The sequence does not converge to $a=1$. However, since for any $\epsilon>0$, pick $N=5$. There is some $n>N=5$, which is 0, that satisfies this definition. 
+
+(c) Consider the sequence $\sin{n}$. This is divergent, as the sequence is periodic. However, for the limit $a=0$, we can always pick any $\epsilon \leq 1$. Then for all $N \in \mathbb{N}$, there exists $n>N$ (in fact it is all $n$), $|\sin{n}-0|\leq 1$.
+
+(d) Consider the slightly modified sequence from (c), $n \sin{n}$ for $n<1000$, $n$ for $n \geq 1000$. Notice it diverges to positive infinity. However, if we fix some $\epsilon = 1000$ at the start, then clearly if we let $N=1$ then at least $n=1,2,3,4>N$ satisfies $|n \sin{n} - 0| < 1000$. Also, however, starting from $n=1000$, it is no longer periodic and shoots off to infinity.
+Thus, it does not satisfy (c).
+
+\begin{remark}
+    (a) does not enforce the sequence to stay close to the limit forever after some point. It only needs to be close to the limit \textit{at} some point.
+    \\(b) is similar to (a). 
+    \\(c) does not enfore the sequence to be close to the limit at all. However, it does enforce that we don't have some divergent sequence as there
+    must always be some point in the $\epsilon$-neighbourhood of the limit.
+    \\(d) is similar to (c), but it further allows divergence to infinity. 
+\end{remark}
+
+3.5 The sequence $\{-\frac{1}{n}\}$. All the terms are negative but it converges to 0. 
+\begin{proof}
+    For all $\epsilon>0$, choose $N = \frac{1}{\epsilon}$. For all $n>N$,
+    \begin{align}
+        |-\frac{1}{n}-0| &= \frac{1}{n}  \\
+                         &< \frac{1}{N} \\
+                         &= \frac{1}{\frac{1}{\epsilon}} \\
+                         &= \epsilon
+    \end{align}
+\end{proof}
+The sketch work has been omitted.
+
+3.6 (a) $L \in [0,1]$.
+
+(b) Consider enumerating $\mathbb{Q}$, which is countable, in the same manner as the diagonal counting argument. Notice that we can always encounter the same rational number
+infinitely many times (since there are there are more than one representation for each rational number). And by density of $\mathbb{Q}$ in $\mathbb{R}$, we can always find a subsequence that converges to any real number.
+This is because for any $\epsilon > 0$, and real number $L$, there is rational number $q$ such that $a-\epsilon < q < a+\epsilon$, i.e. $|q-a|<\epsilon$. And this rational q will appear infinitely many times so we are sure to
+be able to construct some subsequence that converges to $a$. 
+
+\begin{remark}
+    I think this showcases the significance of density of $\Q$ in $\R$. It captures
+    the essence of a rational number being infinitely close ($\epsilon$-close) to an irrational, but not
+    equalling the irrational.
+\end{remark}
+
+3.7 (a) Not possible. Suppose it did, then it implies that for all $\epsilon>0$, there is an $N$ such that for all $n>N$,  $|a_n-3.5|<\epsilon$. Say we pick $\epsilon=0.1$. Then the assumption implies that there will be some integer $a_n$ such that $3.4 < a_n < 3.6$, which is impossible.
+
+(b) For the sake of contradiction, suppose $a_n \neq a_m$ for all $n \neq m$, but $(a_n)$ converges to $a$. Without loss of generality, assume $n > m$. Suppose $\epsilon = 0.25$, then by the definition of convergence, there exists an $N$ such that for all $j>N$, $|a_j-a|<\epsilon$. Hence, if $n>m>N$, then $|a_n-a|<0.25$ and $|a_m-a|<0.25$. Then
+\begin{align}
+    |a_n-a_m| &= |a_n - a + a - a_m| \\
+    &\geq |a_n - a| + |a_m - a| \\
+    &< 0.25 + 0.25 \\
+    &= 0.5
+\end{align}
+However, this is impossible, since we must have $|a_n-a_m|\geq 1$ as they are both distinct integers. We have reached a contradiction. 
+\begin{remark}
+    The choice for 0.25 was arbitrary. In fact, we could have picked any $\epsilon < \frac{1}{2}$. We just need to show that $\epsilon$ must be greater than 1 for distinct integers $a_n, a_m$.
+\end{remark}
+
+(c) The sequence must be constant after at most finite terms. It may be constant right from the beginning, or after finite terms. 
+
+3.8 (a) By assumption, for $\epsilon/2 > 0$, there exists $N_1$ such that for all $n > N_1$, $|a_n-a|<\epsilon/2$, and there exists $N_2$ such that for all $n > N_2$, $|b_n-b|<\epsilon/2$. Thus, for all $\epsilon > 0$, let $N=\max\{N_1, N_2\}$. For all $n>N$,
+\begin{align}
+    |(a_n + b_n)-(a+b)| &= |(a_n - a) + (b_n - b)| \\
+                        &\leq |a_n-a| + |b_n-b| \\
+                        &< \frac{\epsilon}{2} + \frac{\epsilon}{2} \\
+                        &= \epsilon
+\end{align} 
+And we are done.
+
+(b) First suppose $c \neq 0$. For $\frac{\epsilon}{|c|}>0$, there exists $N_1$ such that for all $n > N_1$, $|a_n-a| < \frac{\epsilon}{|c|}$. Thus, for all $\epsilon>0$, let $N=N_1$. Then for all $n>N$, we have
+\begin{align}
+    |ca_n-ca| &= |c||a_n-a| \\
+              &< |c|\frac{\epsilon}{|c|} \\
+              &= \epsilon
+\end{align} 
+If $c = 0$, then for all $\epsilon>0$, for all $n$, $|0-0|=0 < \epsilon$.
+
+3.9 For any $M > \frac{M}{2} > 0$, there exists an $N_0$ such that $a_n > \frac{M}{2}$ for all $n > N$, and
+there exists an $N_1$ such that $b_n > \frac{M}{2}$ for all $n > N$. Thus, take $N=\max{N_0,N_1}$. Then for
+for all $n > N$, 
+\begin{align}
+    a_n + b_n &> \frac{M}{2} + \frac{M}{2} \\
+    &> M.
+\end{align}
+
+3.10 (Intertwining sequence theorem) If $a_{2n}$ and $a_{2n+1}$ both converge to L, then there exist an $N_1$ such that $|a_{2n}-L|<\epsilon$ and an $N_2$ such 
+that $|a_{2n+1} - L| < \epsilon$. Take $N=\max{N_1, N_2}$. Then for all $n > N$, since $a_n$ is an index of one of these subsequences, $|a_n - L|<\epsilon$.
+
+3.11 Consider the counter-example $\{ 1 - \frac{1}{n} : n \in \N \}$. Clearly, every element is less than $1$. However, by a straight-forward proof we can show $(1-\frac{1}{n}) \rightarrow 1$. 
+By another straight-forward proof, we can show that the above set has no maximum (but has a supremum). Thus, $a_n$ converges but does not have a maximum. \textcolor{red}{TO DO.}
+
+3.12 (a) If $a_n$ diverges to $\infty$, then for all $M > 0$, there exists an $N$ such that $a_n > M$ for all $n > N$. 
+This implies that for all $n \leq N$, $a_n \leq M$. The set of these finite $a_n$ will be so that $a_{f(n)} \leq M$. Since these are finite, 
+we can find take $N_{\max} = \max\{f(n): a_{f(n)} \leq M\}$. And with $f$ being bijective, we are guaranteed that no other numbers $n$ in the range will be
+cause $a_{f(n)} \leq M$. Thus, for all $f(n) > N_{\max}$, $a_{f(n)} > M$.
+
+(b) Similar to (a). If $a_n \arr L$, then for all $\epsilon > 0$, there exists an $N$ such that $|a_n - L| < \epsilon$ for all $n > N$. Thus, there are
+finitely many $n \leq N$ such that $|a_n - L| \geq \epsilon$. Some of these may be less than $\epsilon$, but that doesn't change the fact that it's finite. For those $n$, they will be mapped to $f(n)$,
+such that $|a_{f(n)} - L| \geq \epsilon$. Take $M = \max \{a_f(n): |a_f(n) - L| \geq \epsilon\}$. Then for all $f(n) > M$, we have $|a_{f(n)} - L| < \epsilon$.
+
+(c) \textcolor{red}{TO DO.} %$a_n$ diverges means there exists some $\epsilon > 0$ where for all $N$, there is some $n > N$ such that $|a_n - a| \geq \epsilon$. Try to understand
+% $a_{f(n)}$ as a rearrangement of the sequence. Each $N$ will be mapped to $f(N)$, and corresponding $n_0 > N$ will be mapped to $f(n_0)$.
+
+3.13 (a) For $\epsilon/2>0$, there exists an $N_1$ such that $n>N_1$ implies $|a_n-a|<\epsilon/2$ and $n>N_2$ implies $|b_n-b|<\epsilon/2$. Let $N=\max\{N_1,N_2\}$, then for
+all $\epsilon>0$, 
+\[
+    |(a_n-b_n)-(a-b)|
+    =|(a_n-a)-(b_n + b)|
+    \leq |a_n-a|+|b_n-b|
+    \leq 2 \cdot \epsilon/2
+    =\epsilon
+    \]
+
+(b) Since $b_n$ is convergent, then $|b_n|$ is bounded by some real constant $C$. Thus, (by scratch work),
+for $\epsilon_1=\frac{C\epsilon}{2}$ there is some $N_1$ such that $n>N_1$ implies $|a_n-a|<\epsilon_1$. And for 
+$\epsilon_2=\frac{C|b|\epsilon}{2|a|}$ there is some $N_2$ such that $n>N_2$ implies $|b_n-b|<\epsilon_2$. Thus,
+let $N=\max\{N_1, N_2\}$, then for all $\epsilon > 0$,
+\[
+    |\frac{a_n}{b_n}-\frac{a}{b}=|\frac{a_n}{b_n}-\frac{a}{b_n}+\frac{a}{b_n}-\frac{a}{b}|
+    \leq |\frac{a_n-a}{b_n}|+|\frac{a(b_n-b)}{b_n b}| < \epsilon/2+\epsilon/2=\epsilon
+    \]
+And we are done.
+
+3.14 For $(a_n)$, we will show it is monotonically decreasing and bounded. For the former, we proceed by induction. 
+Since $a_0=2\sqrt{3}$, and $a_1=$ \textcolor{red}{TO DO.}
+
+3.15 
+\\$a_n=\{1,-1,1,-1,\dots\}$ and $b_n=\{-1,1,-1,1,\dots\}$, so $a_n+b_n=\{0,0,0,\dots\}$.
+
+3.16 $a_n=\{1,0,1,0,1,0,\dots\}, b_n=\{0,1,0,1,\dots\}$, so $a_n b_n=\{0,0,0,0,\dots\}$.
+
+3.19 (a) This one is simple. For odd terms, let $a_n=6+\frac{1}{2n}$. For even terms, let $a_n=7-\frac{1}{2n}$. 
+\begin{proof}
+    We prove that $6<a_n<7$ and $a_{2k+1}, a_{2k}$ converge respectively to 6 and 7.
+\end{proof}
+
+(b) Revisit Exercise 3.6. Let the sequence be
+\[
+\frac{1}{2}, \frac{1}{3}, \frac{2}{3}, \frac{1}{4}, \frac{2}{4}, \frac{3}{4}, \frac{1}{5}, \dots    
+\]
+
+\begin{proof}
+    \textcolor{red}{TO DO.}
+\end{proof}
+
+(c) Intuition says that such a sequence is impossible, as if terms are getting closer and closer to any $\frac{1}{k}$, which itself is getting closer and closer to 0, then there will be terms getting closer to 0. 
+
+\begin{proof}
+    \textcolor{red}{TO DO.}
+\end{proof}
+
+(d) This is the same as Exercise 3.6(b). The sequence should be all rational numbers. 
+\begin{proof}
+    \textcolor{red}{TO DO.}
+\end{proof}
+
+3.20 (a) $\{\frac{4}{9},-\frac{4}{9},\frac{4}{9},-\frac{4}{9},\ldots\}$ is bounded, does not converge to anything, but odd terms converge to $\frac{4}{9}$.
+
+(b) If $a_n$ does not converge to $a$, then it cannot have a subsequence that converges to $a$.
+
+(c) False, consider $a_n=(-1)^{n+1}\frac{1}{n}$. Odd terms are decreasing, even terms are increasing, $a_n$ converges to $0$.
+
+(d) By Monotone Convergence Theorem (Theorem 3.27), monotone sequences converge iff bounded. Thus, this is impossible.
+
+(e) Consider $a_n = n$. The sequence is unbounded, thus is divergent. Any subsequence is also unbounded, thus is also divergent. 
+
+(f) Impossible. A bounded sequence means all terms $a_n \leq |C|$. Any term from a subsequence is also a term in the sequence. Thus,
+any term in the subsequence must also be bounded by $|C|$.
+
+3.21 By Bolzano-Weierstrass theorem, $(a_{n_k})$ itself is a sequence. Thus, by Bolzano-Weierstrass theorem, since it is bounded, it must have a bounded subsequence $(a_{n_{k_j}})$. 
+This sub-sub-sequence is a sub-seqeuence of $a_n$. 
+
+3.22 (a) We have $a_n \arr L$ and $a_n \leq M$. For all $\epsilon > 0$, there exists an $N$ such that $n > N$ implies $|a_n - L| < \epsilon$. Then 
+\begin{align}
+    L - \epsilon &< a_n < L + \epsilon \\
+    L - \epsilon &< a_n \leq M \\
+    L - \epsilon &< M
+\end{align}
+and so \[L < M + \epsilon\] for all $\epsilon > 0$. From the exercise in Chapter 1, this implies $L \leq M$ (proof by contradiction).
+
+(b) Let $a_n \leq b_n$ for all $n$. Also, let $a_n \arr L$ and $b_n \arr M$. Similar to (a), we have
+\[L - \epsilon < a_n < L + \epsilon\] and \[M - \epsilon < b_n < M + \epsilon.\]
+Putting them together gives 
+\[L - \epsilon < M + \epsilon\]
+so
+\[L < M + 2\epsilon\] for all $\epsilon$. Suppose for contradiction $L > M$. Then choose $\epsilon=\frac{L-M}{2}$.
+Then $L < M + 2(\frac{L-M}{2}) = L$, a contradiction. So $L \leq M$.
+
+3.23 (a) For all $\epsilon > 0$, there exists an $N$ such that for all $n > N$, we have $|a_n - L| < \epsilon$.
+Choose the same $N$. Then, by reverse triangle inequality,
+\begin{align}
+    ||a_n| - |L|| \leq |a_n - L| < \epsilon
+\end{align}
+
+(b) Let $a_n = {(-1)}^{n+1}$, an alternating sequence of $1$s and $-1$s.
+
+3.24 (Cauchy $\implies$ bounded). Fix $\epsilon = 1$. Then there is an $N$ such that for all $m,n > N$, we have $|a_m - a_n| < 1$. Then for all $m > N$,
+\[ a_{N+1} - 1 < a_m < a_{N+1} + 1.\] Let $U= \max\{ a_1, \ldots, a_N, a_{N+1} + 1 \}$. Then $a_n \leq U$ for all $n$. For the lower bound, take $L = \min \{ a_1, \ldots, a_n, a_{N+1}-1\}$.
+
+3.25 (Monotone convergence theorem, decreasing case). Let $(a_n)$ be a monotonically decreasing sequence. If $(a_n)$ is bounded below by $M$, then $a_n \geq M$ for all $n$.
+Let $S=\{a_n : n \in \N\}$. It is non-empty and bounded, and so by completeness of $\R$,  $\beta = \inf S$ exists. By
+infimum property, there exists an $a_N \in S$ and a corresponding $N$ such that $a_N < \beta + \epsilon$. Since $(a_n)$ is monotonically decreasing, \[\beta - \epsilon < \cdots < a_{n+2} < a_{n+1} < a_{n} < a_{N} < \beta + \epsilon.\] That is 
+to say for all $n > N$, $|a_n - \beta| < \epsilon$.
+
+Now suppose $a_n$ was not bounded. Then for all lower bounds $M$, there is an $n$ such that $a_n < M$. Since $a_n$ is monotonically decreasing, we have
+\[\cdots < a_{n+1} < a_{n} < M\]
+which is to say that for all $n > N$, we have $a_n < M$. And so, this means it diverges to $-\infty$ and is thus not convergent.
+
+3.26 If $S$ is bounded below, and is nonempty, then by completeness of \R, $\inf S$ exists. By infima analytically thoerem, for all $\epsilon$ and thus for all $n$ here, there exists a $b_n \in S$ such that \[\inf S + \frac{1}{n} > b_n.\] This forms a sequence.
+Now by squeeze theorem and limit laws, \[\inf S + \frac{1}{n} \geq b_n \geq \inf S\] for all $n$, so \[\lim_{n \arr \infty}{b_n} = \inf S.\]
+
+3.27 $\{1,1,2,1,3,1,4,1,5,1,6,1,\dots\}$
+
+3.28 We prove them by cases. The cases $r=0, r=1$ are trivial as they are constant sequences. First consider $0<r<1$. We claim that $r^n$ will be bounded and monotonically decreasing.  It is clear
+that $r^n$ is bounded by 0 and 1, as they are all positive numbers, and $a^n < b^n$ for all $n$ since $a<b$ thus $a^n/b^n < 1$. To show they are decreasing monotonically, consider $(a^{n+1}/b^{n+1})/(a^n/b^n)$ which gives
+$a/b<1$, thus it is monotonically decreasing (since the subsequent term is less than the previous term for all $n$). Thus, we conclude it converges to 0. Applying the same reasoning to $-1<r<0$, it converges to 0 as well.
+
+For $r > 1$, it is monotone increasing since $r^{n+1}/r^n=r>1$. It is unbounded. To prove this, pick $N=\log_r{M}$ for all $M$, then $r^n>M$ for all $n>N$ as
+\[
+    r^n > r^N= r^{\log_r{M}}=M
+    \]
+Finally, use the same reasoning to show $r<-1$ diverges.
+
+3.29 \underline{Sketch}. 
+\begin{align}
+    |b_n - a| &= |\frac{a_1 + \cdots + a_n}{n} - a| \\
+    &\leq  |\frac{a_1 + \cdots + a_n - a}{n}| \\
+    &= \frac{1}{n}|a_1 + \cdots + a_n - a| \\
+    &\leq \frac{1}{n} (|a_1|+\cdots+|a_n|+|a|) \\
+    &\leq \frac{1}{n} (n|C|+|a|) \\
+    &= |C|+\frac{|a|}{n}
+\end{align}
+
+\textcolor{red}{TO DO.}
+
+3.30 If $(a_n)$ is bounded, then $\sup \{a_n : n \in \N \}$ exists. Thus, $b_n$ is a monotonically decreasing sequence by Exercise 1.23.
+Also, since $\sup\{a_n\} \geq a_n \geq \inf\{a_n\}$, then $\sup\{a_n\} \geq \inf\{a_n\}$ always and so $b_n$ is bounded below by $\inf\{a_n\}$.
+Thus, $(b_n)$ converges.
+
+3.31 A trivial example of a sequence is $\{1,17,-\pi,1,17,-\pi,\dots \}$. 
+
+3.32 (Subsequence proof, every $a_{n_k} \implies a_n \rightarrow a$). If every subsequence $a_{n_k} \rightarrow a$, since $a_n$ is itself a subsequence, $a_n \rightarrow a$.
+
+\begin{remark}
+    This gives us a good way to check if a sequence diverges. 
+    \begin{enumerate}
+        \item If there exists a divergent subsequence $a_{n_k}$, then $a_n$ diverges. Conversely, if $a_n$ diverges, there exists a divergent subsequence.
+        \item In fact, if $a_n$ diverges to $\infty$, every subsequence $a_{n_k}$ diverges to $\infty$!
+    \end{enumerate}
+\end{remark}
+
+3.33 \textcolor{red}{TO DO.}
+
+3.34 \textcolor{red}{TO DO.}
+
+3.35 Consider the sequence $\{n: n\in\N\}$. Every subsequence is strictly monotonically increasing. Every subsequence is not bounded. Thus, every subsequence diverges to infinity.
+
+3.41 (\textit{Hint: Bolzano-Weierstrass theorem, countable union theorem}) \textcolor{red}{TO DO.}
+
+3.42 \textcolor{red}{TO DO.}
+
+3.43 \textcolor{red}{TO DO.}
+
+3.44 Since $a_n$ is bounded, by Bolzano-Weierstrass theorem, there exists a convergent subsequence (at least one). \textcolor{red}{TO DO.}
+
+3.45 Clearly, $a_n$ is a monotonically increasing sequence, since $a_{n}\leq a_{n+1}$ for all $n$. Thus, by monotone convergence theorem,
+since $a_n$ converges to $\frac{\pi^2}{6}$ by Euler's result, we have $\sup\{a_n:n\in\N\}=\frac{\pi^2}{6}$, so $a_n\leq \frac{\pi^2}{6}$ for all $n$.
+
+Notice that $b_n \leq a_n$ for all $n$, since we are adding on $\frac{1}{n^3} \leq \frac{1}{n^2}$ at each step. So now we have
+\[b_n \leq a_n \leq \frac{\pi^2}{6}\]
+for all $n$. Since $b_n$ is monotonically increasing also, by monotone convergence theorem, since $b_n$ is bounded above by $\frac{\pi^2}{6}$, $b_n$ is convergent.
+
+\begin{remark}
+    We had to do all these steps because we needed a \emph{fixed} upper bound $M$.
+\end{remark}
